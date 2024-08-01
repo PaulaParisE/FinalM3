@@ -1,0 +1,337 @@
+  /*mobile first*/
+  *{
+    box-sizing: border-box;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+}
+
+.section{
+    height: 100vh;
+   
+}
+.nav-pills .nav-link {
+    color: #2b2e4a !important;
+}
+.logo {
+    padding-left: 2rem;
+    width: 110px;
+}
+.chat__img img{
+    width: 40px;
+    border-radius: 30px;
+}
+.chat__content {
+    overflow: hidden;
+    white-space: nowrap;    
+}
+.chat__content h4 {
+    font-size: 1.1rem !important;
+    margin-top: 0.5rem;
+    line-height: 1rem !important;
+    font-weight: 300;
+    letter-spacing: 0.03rem;
+}
+.chat__content p {
+    margin-block-end: 0.3rem;
+    font-size: 0.7rem;
+    color: #999;
+    text-overflow: ellipsis;
+}
+.chat_active h4, {
+    font-weight: 600 !important;
+    color: #222;
+}
+.state {
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin-left: 30px;
+    margin-top: 30px;
+    border-radius: 6px;
+    border: 2px solid white;
+    position: absolute;
+}
+.state_active {
+    background-color: rgb(46, 165, 46);
+}
+.state_away {
+    background-color: #e7dc6b;
+}
+.state_offline {
+    background-color: #ff2172;
+}
+.chat__time {
+    width: 75px;
+    align-self: flex-end;
+}
+.chat__time p {
+    font-size: 0.6rem;
+    line-height: 90%;
+    border: 1px solid #d1d1d1;
+    border-radius: 6px;
+    padding: 0.4rem;
+}
+.btn, .btn:hover {
+    border: none;
+    height: 100%;
+}
+.dropdown-toggle::after {
+    vertical-align: .15em;
+    color: #a0b3ce;
+}
+.dropdown {
+    background-color: rgba(235,241,247);
+    border-radius: 16px 0px 0px 16px;
+}
+.form-select:focus {
+    background-color: rgba(235,241,247);
+}
+.btn-enviar {
+    color: #a0b3ce !important;
+    padding: 1rem;
+    border: none !important;
+    background-color: rgba(235,241,247) !important;
+    border-radius: 0px 16px 16px 0px;
+}
+.form-control {
+    background-color: rgba(235,241,247);
+    border: none;
+    color: #78869b !important;
+    line-height: 150%;
+    padding: 1rem;
+}
+.form-control:focus {
+    background-color: rgba(235,241,247);
+    border: none;
+}
+@media (max-width:600px) {
+    .sidebar{
+        display: none !important;
+    }
+    .search {
+       display: none;
+    }    
+}
+
+@media (min-width:600px){
+    .container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .sidebar{
+        width: 40%;
+        float: left;
+        padding: 1rem;
+    }
+
+    .main {
+        width: 60%;
+        float:left;
+    }
+    .search {
+        width: 100%;
+    }
+}
+
+.sidebar{
+    width:30vw;
+    margin:0 auto;
+    max-width: 400px;
+    min-width: 300px;
+    background-color: #FFF;
+    background-image: url(../img/pattern-celeste.png);
+    background-size: 9%;
+    border-radius:10px;
+}
+.chat {
+    background-color: white;
+    margin-top: 1rem;
+    border-radius: 16px;
+    -webkit-box-shadow: 0px 20px 40px -29px rgba(6, 22, 26, 0.4);
+    -moz-box-shadow: 0px 20px 40px -29px rgba(6, 22, 26, 0.4);
+    box-shadow: 0px 20px 40px -29px rgba(6, 22, 26, 0.4);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+}
+
+.chat__menu{
+    list-style: none;
+    padding:10px;
+    margin:0;    
+}
+
+.chat__item{
+    display:flex;
+    align-items: center;
+    justify-content: start;
+    column-gap: 10px;
+    padding:9px;
+   
+}
+
+.chat__item:not(:last-child){
+    border-bottom: 1px solid #EEE;
+}
+.who_writes {
+    display: inline-flex;
+}
+
+/* Chat containers */
+.container {    
+    background-color: #f1f1f1;
+    border-radius: 16px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 60%;
+  }
+  
+  /* Darker chat container */
+  .container_darker {
+    border-radius: 16px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 60%;
+    border-color: #ccc;
+    background-color: #ddd;
+    align-self: flex-end;
+  }
+  
+  /* Clear floats */
+  .container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Style images */
+  .container img,.container_darker img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+  
+  /* Style the right image */
+  .container img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+  }
+  
+  /* Style time text */
+  .time-right {
+    float: right;
+    color: #aaa;
+  }
+  
+  /* Style time text */
+  .time-left {
+    float: left;
+    color: #999;
+  }
+  
+  /* Ellipsis */
+  .loading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 7px;
+    margin-left: 2px;
+    width: 12px;
+    float: left;
+    }
+
+    .dot {
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        background-color: #2b2e4a;
+        animation: blink 1.4s infinite both;
+    }
+
+    .dot:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .dot:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+
+    @keyframes blink {
+        0%, 20%, 50%, 80%, 100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        40% {
+            transform: scale(1.5);
+            opacity: 0.7;
+        }
+        60% {
+            transform: scale(0.5);
+            opacity: 0.5;
+        }
+    }
+
+    .typing {
+        display: inline;
+        position: relative;
+    }
+    
+    .ellipsis::after {
+        content: '.';
+        display: inline-block;
+        animation: ellipsis-blink 1.5s infinite;
+    }
+    
+    .ellipsis::after {
+        content: '';
+        display: inline-block;
+        width: 0.2em;
+        height: 0.2em;
+        background-color: currentColor;
+        border-radius: 50%;
+        animation: ellipsis-blink 1.5s infinite;
+    }
+    
+    @keyframes ellipsis-blink {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    
+    .ellipsis::before {
+        content: '';
+        display: inline-block;
+        width: 0.2em;
+        height: 0.2em;
+        background-color: currentColor;
+        border-radius: 50%;
+        animation: ellipsis-blink 1.5s infinite;
+        animation-delay: 0.3s;
+    }
+    
+    .ellipsis::nth-of-type(2)::before {
+        animation-delay: 0.6s;
+    }
+    
+    .ellipsis::nth-of-type(3)::before {
+        animation-delay: 0.9s;
+    }
+
+   
+    
